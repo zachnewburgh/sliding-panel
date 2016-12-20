@@ -6,9 +6,30 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <script src="https://use.fontawesome.com/b646bad7c7.js"></script>
   </head>
 
   <body>
+
+  <header>
+    <h1 class="title">Portfolio</h1>
+    <i class="fa fa-bars nav-toggle" aria-hidden="true" onclick="toggleNav()"></i>
+
+    <nav class="main-navigation">
+      <i class="fa fa-times nav-toggle" aria-hidden="true" onclick="toggleNav()";"></i>
+
+      <ul>
+        <li class="nav-toggle-title"><a>Portfolio</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
     <%= yield %>
+    
   </body>
 </html>

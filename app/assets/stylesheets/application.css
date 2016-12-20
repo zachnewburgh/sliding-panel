@@ -1,15 +1,80 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+body {
+  margin: 0;
+  font-family: helvetica;
+}
+
+header {
+  background: #333;
+  color: #FFF;
+  padding: 20px;
+  position: relative;
+}
+
+.title {
+  margin-left: 100px;
+  font-size: 1em;
+}
+
+.nav-toggle {
+  position: absolute;
+  top: 30px;
+  cursor: pointer;
+}
+
+.nav-toggle-title {
+  font-size: 1.5em;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+}
+
+.main-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  text-align: center;
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.main-navigation.open {
+  transform: translateX(0);
+}
+
+.main-navigation .nav-toggle {
+  right: 0;
+  top: 1%;
+  margin-right: 0.5%;
+}
+
+.main-navigation ul {
+  margin: 0;
+  padding: 0;
+}

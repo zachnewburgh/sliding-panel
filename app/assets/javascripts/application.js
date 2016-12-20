@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+toggleNav = function() {
+  var nav = document.getElementsByClassName("main-navigation")[0]; 
+  nav.classList[1] === "open" ? nav.classList.remove("open") : nav.classList.add("open");
+}
